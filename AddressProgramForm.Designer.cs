@@ -32,14 +32,14 @@
             this.lblStreetAddress = new System.Windows.Forms.Label();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblProvince = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtAptNumber = new System.Windows.Forms.TextBox();
+            this.txtStreetAddress = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtProvince = new System.Windows.Forms.TextBox();
             this.btnEnter = new System.Windows.Forms.Button();
             this.lblEnterInformation = new System.Windows.Forms.Label();
             this.lblPostalCode = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPostalCode = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblAptNumber
@@ -82,34 +82,34 @@
             this.lblProvince.TabIndex = 3;
             this.lblProvince.Text = "Province :";
             // 
-            // textBox1
+            // txtAptNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtAptNumber.Location = new System.Drawing.Point(120, 47);
+            this.txtAptNumber.Name = "txtAptNumber";
+            this.txtAptNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtAptNumber.TabIndex = 4;
+            this.txtAptNumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtStreetAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtStreetAddress.Location = new System.Drawing.Point(145, 85);
+            this.txtStreetAddress.Name = "txtStreetAddress";
+            this.txtStreetAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtStreetAddress.TabIndex = 5;
             // 
-            // textBox3
+            // txtCity
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 128);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtCity.Location = new System.Drawing.Point(120, 128);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(100, 20);
+            this.txtCity.TabIndex = 6;
             // 
-            // textBox4
+            // txtProvince
             // 
-            this.textBox4.Location = new System.Drawing.Point(120, 167);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtProvince.Location = new System.Drawing.Point(120, 167);
+            this.txtProvince.Name = "txtProvince";
+            this.txtProvince.Size = new System.Drawing.Size(100, 20);
+            this.txtProvince.TabIndex = 7;
             // 
             // btnEnter
             // 
@@ -141,32 +141,33 @@
             this.lblPostalCode.TabIndex = 10;
             this.lblPostalCode.Text = "Postal Code :";
             // 
-            // textBox5
+            // txtPostalCode
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtPostalCode.Location = new System.Drawing.Point(120, 210);
+            this.txtPostalCode.Name = "txtPostalCode";
+            this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
+            this.txtPostalCode.TabIndex = 11;
             // 
             // frmAddressProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 335);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtPostalCode);
             this.Controls.Add(this.lblPostalCode);
             this.Controls.Add(this.lblEnterInformation);
             this.Controls.Add(this.btnEnter);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtProvince);
+            this.Controls.Add(this.txtCity);
+            this.Controls.Add(this.txtStreetAddress);
+            this.Controls.Add(this.txtAptNumber);
             this.Controls.Add(this.lblProvince);
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.lblStreetAddress);
             this.Controls.Add(this.lblAptNumber);
             this.Name = "frmAddressProgram";
             this.Text = "Address Info";
+            this.Load += new System.EventHandler(this.frmAddressProgram_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,14 +179,14 @@
         private System.Windows.Forms.Label lblStreetAddress;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblProvince;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtAptNumber;
+        private System.Windows.Forms.TextBox txtStreetAddress;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtProvince;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Label lblEnterInformation;
         private System.Windows.Forms.Label lblPostalCode;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPostalCode;
     }
 }
 
