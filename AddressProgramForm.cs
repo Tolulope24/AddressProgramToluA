@@ -16,11 +16,18 @@ namespace AddressProgramToluA
         {
             InitializeComponent();
         }
+        // Procedure : Print Name
+        // Input : string aptNumber, string streetAddress , string  city, String province, String postalCode
+        // Output: Void
+        // Description: This Procedure displays a message box given 5 Parameters
         public void PrintName (String aptNumber, String streetAddress, String city, String province, String postalCode)
         {
             MessageBox.Show("Your Address is: " + aptNumber + " " + streetAddress + " " + city + " " + province + " " + postalCode);
         }
-
+        // Procedure : Print Name
+        // Input : string streetAddress , string  city, String province, String postalCode
+        // Output: Void
+        // Description: This Procedure displays a message box given 4 Parameters
         public void PrintName (String streetAddress, String city, String province, String postalCode)
         {
             MessageBox.Show("Your Address is: " + " " + streetAddress + " " + city + " " + province + " " + postalCode);
@@ -41,34 +48,37 @@ namespace AddressProgramToluA
             userCity = this.txtCity.Text;
             userProvince = this.txtProvince.Text;
             userPostalCode = this.txtPostalCode.Text;
-
+            // If the user doesn't enter the aptNumber call a procedure that only accepts 4 String Parameters
             if (userAptNumber == "")
             {
-                PrintName(userStreetAddress, userCity, userProvince, userProvince);
+                PrintName(userStreetAddress, userCity, userProvince, userProvince, userPostalCode);
             }
-            else if (userStreetAddress == "")
+            // mAKE THE USER ENTER THE sTREET aDDRESS
+            else if (userStreetAddress == " ")
             {
                 MessageBox.Show("Please enter your street address", "Address Program");
             }
-            else if (userCity == "")
+            // Make the user enter the City
+            else if (userCity == " ")
             {
                 MessageBox.Show("Please enter your City", "Address Program");
             }
+            // Make the user enter a province
             else if (userProvince == "")
             {
                 MessageBox.Show("Please enter your Province", "Address Program");
             }
+            // MAke the user enter a Postal Code
             else if (userPostalCode == "")
             {
                 MessageBox.Show("Please enter your Postal Code ", "Address Program");
             }
-            else
+            // if the user enters all the informations, call the procedure that accepts all the strings 
+            else 
             {
                 PrintName(userAptNumber, userStreetAddress, userCity, userProvince, userPostalCode);
             }
-                
-
-
+          
         }
 
         private void frmAddressProgram_Load(object sender, EventArgs e)
